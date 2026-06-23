@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>KITUR</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
+  <title>Neville Kitur | Portfolio</title>
+  <meta name="description" content="Neville Kitur - Founder, Developer & Tech Entrepreneur building scalable digital solutions for Africa.">
+  <meta name="keywords" content="Neville Kitur, Flutter Developer, Mobile App Developer, Tech Entrepreneur, Nairobi, Kenya">
 
   <!-- Favicons -->
   <link href="static/assets/img/jamaica.png" rel="icon">
@@ -30,13 +28,227 @@
   <!-- Main CSS File -->
   <link href="static/assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: SnapFolio
-  * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
-  * Updated: Jul 21 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    /* ===== VENTURES SECTION - MATCHES SITE DARK THEME ===== */
+    .ventures-section {
+      padding: 80px 0;
+      background: transparent;
+    }
+
+    .ventures-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .ventures-header .badge-text {
+      display: inline-block;
+      padding: 6px 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 50px;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .ventures-header h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .ventures-header h2 span {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .ventures-header p {
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.95rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Venture Cards - Minimal, matching existing cards */
+    .venture-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 32px;
+      height: 100%;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .venture-card:hover {
+      background: rgba(255, 255, 255, 0.035);
+      border-color: rgba(255, 255, 255, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .venture-card .venture-number {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.03);
+      line-height: 1;
+    }
+
+    .venture-logo-wrapper {
+      width: 100%;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .venture-logo-wrapper img {
+      max-width: 75%;
+      max-height: 75%;
+      object-fit: contain;
+    }
+
+    .bg-kiu { background: #ffffff; }
+    .bg-fleet { background: #f8f9fa; }
+    .bg-shuffle { background: #0a0a0a; border: 1px solid rgba(255,255,255,0.08); }
+    .bg-bid { background: #1a2332; }
+
+    .venture-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .venture-card .venture-tagline {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.35);
+      font-style: italic;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .venture-card .venture-description {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.85rem;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .venture-card .venture-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .venture-meta .meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .meta-badge.status-live {
+      background: rgba(0, 212, 170, 0.1);
+      color: #00d4aa;
+      border: 1px solid rgba(0, 212, 170, 0.2);
+    }
+
+    .meta-badge.status-dev {
+      background: rgba(255, 193, 7, 0.1);
+      color: #ffc107;
+      border: 1px solid rgba(255, 193, 7, 0.2);
+    }
+
+    .meta-badge.role {
+      background: rgba(255, 255, 255, 0.03);
+      color: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .venture-highlights {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px 0;
+    }
+
+    .venture-highlights li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 6px;
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.8rem;
+      line-height: 1.55;
+    }
+
+    .venture-highlights li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--venture-color);
+      opacity: 0.6;
+    }
+
+    .venture-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+    }
+
+    .venture-link:hover {
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .venture-link i {
+      font-size: 0.9rem;
+    }
+
+    .venture-kiu { --venture-color: #6c757d; }
+    .venture-fleet { --venture-color: #4caf50; }
+    .venture-shuffle { --venture-color: #e0e0e0; }
+    .venture-bid { --venture-color: #ff6b35; }
+
+    @media (max-width: 991px) {
+      .ventures-header h2 { font-size: 2rem; }
+      .venture-card { padding: 24px; }
+    }
+
+    @media (max-width: 767px) {
+      .ventures-header h2 { font-size: 1.6rem; }
+      .venture-logo-wrapper { height: 120px; }
+    }
+
+    html { scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 80px; }
+  </style>
+<base target="_blank">
 </head>
 
 <body class="index-page">
@@ -49,65 +261,59 @@
         <ul>
           <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
           <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+          <li><a href="#ventures"><i class="bi bi-rocket navicon"></i> Ventures</a></li>
+          <li><a href="#skills"><i class="bi bi-hdd-stack navicon"></i> Skills</a></li>
           <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-          <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
           <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
         </ul>
       </nav>
 
       <div class="social-links text-center">
-  <a href="https://github.com/KITURRULES" class="github" target="_blank">
-    <i class="bi bi-github"></i>
-  </a>
-  <a href="https://www.instagram.com/_.kitur_?igsh=MWpzeGd0MWFpa2EyZA==" class="instagram" target="_blank">
-    <i class="bi bi-instagram"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/neville-kitur-992332345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin" target="_blank">
-    <i class="bi bi-linkedin"></i>
-  </a>
-</div>
-
-
+        <a href="https://github.com/KITURRULES" class="github" target="_blank">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.instagram.com/_.kitur_?igsh=MWpzeGd0MWFpa2EyZA==" class="instagram" target="_blank">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/neville-kitur-992332345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin" target="_blank">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
     </div>
-
   </header>
 
   <main class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-
       <div class="background-elements">
         <div class="bg-circle circle-1"></div>
         <div class="bg-circle circle-2"></div>
       </div>
 
       <div class="hero-content">
-
         <div class="container">
           <div class="row align-items-center">
-
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
               <div class="hero-text">
                 <h1>PORT<span class="accent-text">FOLIO</span></h1>
                 <h2>Neville Kitur</h2>
-                <p class="lead">I'm a <span class="typed" data-typed-items="Mobile App Developer, Web Developer, Tech Enthusiast, Creative Director"></span></p>
-                <p class="description">Passionate about changing digital experiences and innovating trends for the future. .</p>
+                <p class="lead">I'm a <span class="typed" data-typed-items="Founder, Mobile App Developer, Web Developer, Tech Entrepreneur, Creative Director"></span></p>
+                <p class="description">Building scalable digital solutions that make life easier, smarter, and more connected across Africa and beyond.</p>
 
                 <div class="hero-actions">
-                  <a href="#resume" class="btn btn-primary">View My Work</a>
+                  <a href="#ventures" class="btn btn-primary">View My Ventures</a>
                   <a href="#contact" class="btn btn-outline">Get In Touch</a>
                 </div>
 
-               <div class="social-links">
-  <a href="https://github.com/KITURRULES" target="_blank">
-    <i class="bi bi-github"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/neville-kitur-992332345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-    <i class="bi bi-linkedin"></i>
-  </a>
-</div>
-
+                <div class="social-links">
+                  <a href="https://github.com/KITURRULES" target="_blank">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/neville-kitur-992332345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -119,18 +325,14 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
-
-    </section><!-- /Hero Section -->
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row">
           <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
             <div class="profile-card">
@@ -145,20 +347,20 @@
 
               <div class="profile-content">
                 <h3>Kitur Neville</h3>
-                <p class="profession">Creative Director &amp; Developer</p>
+                <p class="profession">Founder & Developer</p>
 
                 <div class="contact-links">
-                  <a href="mailto:marcus@example.com" class="contact-item">
+                  <a href="mailto:flyware600@gmail.com" class="contact-item">
                     <i class="bi bi-envelope"></i>
                     flyware600@gmail.com
                   </a>
-                  <a href="tel:+15551234567" class="contact-item">
+                  <a href="tel:+254704597888" class="contact-item">
                     <i class="bi bi-telephone"></i>
                     +254704597888
                   </a>
                   <a href="#" class="contact-item">
                     <i class="bi bi-geo-alt"></i>
-                    Nairobi,Kenya
+                    Nairobi, Kenya
                   </a>
                 </div>
               </div>
@@ -169,19 +371,18 @@
             <div class="about-content">
               <div class="section-header">
                 <span class="badge-text">Get to Know Me</span>
-<h2>Designing Scalable Tech Solutions for Africa and Beyond</h2>
+                <h2>Designing Scalable Tech Solutions for Africa and Beyond</h2>
               </div>
 
               <div class="description">
-  <p>I am Neville Kitur, a tech entrepreneur and software developer passionate about building digital solutions that make life easier, smarter, and more connected. My journey spans from creating innovative mobile and web applications to establishing startups that merge technology with real-world impact.</p>
-  <p>I focus on developing systems that empower businesses and individuals — from data management apps like <strong>KOMpRESS</strong> to financial platforms like <strong>i£!</strong>, logistics solutions such as <strong>ChillDrop</strong>, and wearable tech innovations through <strong>KREATA</strong>. My mission is to drive Africa’s tech growth by designing tools that are scalable, sustainable, and future-ready.</p>
-
+                <p>I am Neville Kitur, a tech entrepreneur and software developer passionate about building digital solutions that make life easier, smarter, and more connected. My journey spans from creating innovative mobile and web applications to establishing startups that merge technology with real-world impact.</p>
+                <p>I focus on developing systems that empower businesses and individuals — from smart queue management with <strong>KIU</strong> to fleet logistics with <strong>Fleet</strong>, music innovation through <strong>Shuffle</strong>, and online commerce via <strong>The Bid</strong>. My mission is to drive Africa's tech growth by designing tools that are scalable, sustainable, and future-ready.</p>
               </div>
 
               <div class="stats-grid">
                 <div class="stat-item">
-                  <div class="stat-number">35+</div>
-                  <div class="stat-label">Projects Completed</div>
+                  <div class="stat-number">4+</div>
+                  <div class="stat-label">Active Ventures</div>
                 </div>
                 <div class="stat-item">
                   <div class="stat-number">5+</div>
@@ -207,11 +408,11 @@
                 <div class="detail-row">
                   <div class="detail-item">
                     <span class="detail-label">Education</span>
-                    <span class="detail-value">Computer Science, MIT</span>
+                    <span class="detail-value">Computer Science, Karatina University</span>
                   </div>
                   <div class="detail-item">
                     <span class="detail-label">Languages</span>
-                    <span class="detail-value">English, Kiswahili,Russian</span>
+                    <span class="detail-value">English, Kiswahili, Russian</span>
                   </div>
                 </div>
               </div>
@@ -219,38 +420,32 @@
               <div class="cta-section">
                 <a href="#" class="btn btn-primary">
                   <i class="bi bi-download"></i>
-                  Download Resume</a>
-               <a href="https://wa.me/254704597888?text=Hi%20Neville!%20I%20saw%20your%20portfolio%20and%20would%20love%20to%20connect."
-   target="_blank"
-   class="btn btn-outline">
-  <i class="bi bi-chat-dots"></i>
-  Let's Talk
-</a>
-
+                  Download Resume
+                </a>
+                <a href="https://wa.me/254704597888?text=Hi%20Neville!%20I%20saw%20your%20portfolio%20and%20would%20love%20to%20connect." target="_blank" class="btn btn-outline">
+                  <i class="bi bi-chat-dots"></i>
+                  Let's Talk
+                </a>
               </div>
             </div>
           </div>
         </div>
-
       </div>
-
-    </section><!-- /About Section -->
+    </section>
 
     <!-- Stats Section -->
     <section id="stats" class="stats section light-background">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row justify-content-center">
           <div class="col-lg-10">
             <div class="stats-wrapper">
               <div class="stats-item" data-aos="zoom-in" data-aos-delay="150">
                 <div class="icon-wrapper">
-                  <i class="bi bi-emoji-smile"></i>
+                  <i class="bi bi-rocket"></i>
                 </div>
-                <span data-purecounter-start="0" data-purecounter-end="22" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Happy Clients</p>
-              </div><!-- End Stats Item -->
+                <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Active Ventures</p>
+              </div>
 
               <div class="stats-item" data-aos="zoom-in" data-aos-delay="200">
                 <div class="icon-wrapper">
@@ -258,7 +453,7 @@
                 </div>
                 <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1" class="purecounter"></span>
                 <p>Projects</p>
-              </div><!-- End Stats Item -->
+              </div>
 
               <div class="stats-item" data-aos="zoom-in" data-aos-delay="250">
                 <div class="icon-wrapper">
@@ -266,30 +461,151 @@
                 </div>
                 <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
                 <p>Hours Of Support</p>
-              </div><!-- End Stats Item -->
+              </div>
             </div>
           </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Stats Section -->
+    <!-- ===== VENTURES SECTION ===== -->
+    <section id="ventures" class="ventures-section">
+      <div class="container" data-aos="fade-up">
+        <div class="ventures-header" data-aos="fade-up" data-aos-delay="100">
+          <span class="badge-text">What I am Building</span>
+          <h2>My <span>Ventures</span></h2>
+          <p>Transforming ideas into scalable, real-world digital products designed for impact across Africa.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- KIU -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="venture-card venture-kiu">
+              <span class="venture-number">01</span>
+              <div class="venture-logo-wrapper bg-kiu">
+                <img src="static/assets/img/kiu_logo.png" alt="KIU Logo">
+              </div>
+              <h3>KIU</h3>
+              <span class="venture-tagline">"Your day made, your way"</span>
+              <p class="venture-description">
+                A smart queue management ecosystem designed to eliminate waiting stress and transform service delivery across institutions and businesses.
+              </p>
+              <div class="venture-meta">
+                <span class="meta-badge status-live"><i class="bi bi-circle-fill" style="font-size:0.5rem;"></i> Live</span>
+                <span class="meta-badge role"><i class="bi bi-person"></i> Founder & Lead Developer</span>
+              </div>
+              <ul class="venture-highlights">
+                <li>Smart slot booking with intelligent queue prediction algorithms</li>
+                <li>Encrypted 6-digit secure authentication system</li>
+                <li>Live performance analytics dashboard for administrators</li>
+                <li>Cross-platform web and mobile interfaces built with Flutter & Firebase</li>
+              </ul>
+              <a href="https://kiuorg.web.app/" target="_blank" class="venture-link">
+                Visit Platform <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Fleet -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="venture-card venture-fleet">
+              <span class="venture-number">02</span>
+              <div class="venture-logo-wrapper bg-fleet">
+                <img src="static/assets/img/fleet_logo.png" alt="Fleet Logo">
+              </div>
+              <h3>Fleet</h3>
+              <span class="venture-tagline">"Move Forward"</span>
+              <p class="venture-description">
+                A comprehensive fleet management platform empowering businesses to track, optimize, and scale their vehicle operations with real-time intelligence.
+              </p>
+              <div class="venture-meta">
+                <span class="meta-badge status-dev"><i class="bi bi-circle-fill" style="font-size:0.5rem;"></i> In Development</span>
+                <span class="meta-badge role"><i class="bi bi-person"></i> Founder & Lead Developer</span>
+              </div>
+              <ul class="venture-highlights">
+                <li>Real-time GPS tracking and route optimization for vehicle fleets</li>
+                <li>Driver performance analytics and maintenance scheduling</li>
+                <li>Fuel consumption monitoring and cost analysis tools</li>
+                <li>Scalable architecture designed for logistics SMEs across East Africa</li>
+              </ul>
+              <a href="#" class="venture-link" style="opacity:0.5; pointer-events:none;">
+                Coming Soon <i class="bi bi-clock"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Shuffle -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="350">
+            <div class="venture-card venture-shuffle">
+              <span class="venture-number">03</span>
+              <div class="venture-logo-wrapper bg-shuffle">
+                <img src="static/assets/img/shuffle_logo.png" alt="Shuffle Logo">
+              </div>
+              <h3>Shuffle</h3>
+              <span class="venture-tagline">"Music shuffling, reimagined"</span>
+              <p class="venture-description">
+                A next-generation music experience that redefines how users discover, shuffle, and engage with their music libraries through intelligent algorithms.
+              </p>
+              <div class="venture-meta">
+                <span class="meta-badge status-dev"><i class="bi bi-circle-fill" style="font-size:0.5rem;"></i> In Development</span>
+                <span class="meta-badge role"><i class="bi bi-person"></i> Founder & Lead Developer</span>
+              </div>
+              <ul class="venture-highlights">
+                <li>AI-powered music discovery and personalized shuffle algorithms</li>
+                <li>Cross-platform mobile experience with seamless library sync</li>
+                <li>Social features for sharing playlists and music moments</li>
+                <li>Offline-first architecture for low-connectivity environments</li>
+              </ul>
+              <a href="#" class="venture-link" style="opacity:0.5; pointer-events:none;">
+                Coming Soon <i class="bi bi-clock"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- The Bid -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="450">
+            <div class="venture-card venture-bid">
+              <span class="venture-number">04</span>
+              <div class="venture-logo-wrapper bg-bid">
+                <img src="static/assets/img/bid_logo.png" alt="The Bid Logo">
+              </div>
+              <h3>The Bid</h3>
+              <span class="venture-tagline">"Bid smarter, win bigger"</span>
+              <p class="venture-description">
+                A secure and transparent online bidding platform connecting buyers and sellers across Africa, designed for auctions, procurement, and competitive commerce.
+              </p>
+              <div class="venture-meta">
+                <span class="meta-badge status-dev"><i class="bi bi-circle-fill" style="font-size:0.5rem;"></i> In Development</span>
+                <span class="meta-badge role"><i class="bi bi-person"></i> Founder & Lead Developer</span>
+              </div>
+              <ul class="venture-highlights">
+                <li>Real-time bidding engine with live auction countdowns</li>
+                <li>Escrow payment system ensuring secure transactions</li>
+                <li>Verified seller profiles and product authentication</li>
+                <li>Mobile-first design optimized for African market connectivity</li>
+              </ul>
+              <a href="#" class="venture-link" style="opacity:0.5; pointer-events:none;">
+                Coming Soon <i class="bi bi-clock"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== /VENTURES SECTION ===== -->
 
     <!-- Skills Section -->
     <section id="skills" class="skills section">
-
       <div class="container section-title" data-aos="fade-up">
-  <h2>Skills</h2>
-  <p>Core technical expertise spanning software development, cloud architecture, AI integration, and startup-focused innovation.</p>
-</div><!-- End Section Title -->
-
+        <h2>Skills</h2>
+        <p>Core technical expertise spanning software development, cloud architecture, AI integration, and startup-focused innovation.</p>
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row">
           <div class="col-lg-6">
             <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-              <h3>Front-end &amp; Mobile Development</h3>
+              <h3>Front-end & Mobile Development</h3>
               <div class="skills-animation">
                 <div class="skill-item">
                   <div class="d-flex justify-content-between align-items-center">
@@ -332,7 +648,7 @@
                   <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <div class="skill-tooltip">Strong proficiency in ES6+, DOM manipulation, and modern frameworks</div>
+                  <div class="skill-tooltip">Proficient in responsive grid systems, components, and utility classes</div>
                 </div>
 
                 <div class="skill-item">
@@ -346,7 +662,7 @@
                   <div class="skill-tooltip">Experience with modern native Android UI development using declarative frameworks</div>
                 </div>
               </div>
-            </div><!-- End Frontend Skills -->
+            </div>
           </div>
 
           <div class="col-lg-6">
@@ -361,9 +677,7 @@
                   <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <!--                  edit here-->
-
-                  <div class="skill-tooltip">Server-side JavaScript development with Express and REST APIs</div>
+                  <div class="skill-tooltip">Building robust Python web applications with Django ORM, REST APIs, and admin panels</div>
                 </div>
 
                 <div class="skill-item">
@@ -379,7 +693,7 @@
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between align-items-center">
-                    <h4>mySQL</h4>
+                    <h4>MySQL</h4>
                     <span class="skill-percentage">65%</span>
                   </div>
                   <div class="progress">
@@ -388,7 +702,7 @@
                   <div class="skill-tooltip">Database design, optimization, and complex queries</div>
                 </div>
 
-                  <div class="skill-item">
+                <div class="skill-item">
                   <div class="d-flex justify-content-between align-items-center">
                     <h4>Kotlin</h4>
                     <span class="skill-percentage">90%</span>
@@ -396,30 +710,23 @@
                   <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <div class="skill-tooltip">Database design, optimization, and complex queries</div>
+                  <div class="skill-tooltip">Native Android development with Kotlin, coroutines, and modern architecture patterns</div>
                 </div>
               </div>
-            </div><!-- End Backend Skills -->
+            </div>
           </div>
         </div>
-
       </div>
-
-    </section><!-- /Skills Section -->
+    </section>
 
     <!-- Resume Section -->
     <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-<div class="container section-title" data-aos="fade-up">
-  <h2>Resume</h2>
-  <p>A snapshot of my professional journey — from architecting enterprise systems to building innovative startups, driving scalable software solutions, and integrating AI-driven technologies across diverse industries.</p>
-</div><!-- End Section Title -->
-
-
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>A snapshot of my professional journey — from architecting enterprise systems to building innovative startups, driving scalable software solutions, and integrating AI-driven technologies across diverse industries.</p>
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4">
           <!-- Left column with summary and contact -->
           <div class="col-lg-4">
@@ -429,11 +736,11 @@
               </div>
 
               <h3>Professional Summary</h3>
-              <p>Driven software architect with expertise in developing scalable, high-performance enterprise solutions. Passionate about leveraging cutting-edge technologies to solve complex business challenges.</p>
+              <p>Driven software architect and tech entrepreneur with expertise in developing scalable, high-performance enterprise solutions. Passionate about leveraging cutting-edge technologies to solve complex business challenges across Africa.</p>
 
               <h3 class="mt-4">Contact Information</h3>
               <ul class="contact-info list-unstyled">
-                <li><i class="bi bi-geo-alt"></i> 20045-00100 Nairobi,Kenya</li>
+                <li><i class="bi bi-geo-alt"></i> 20045-00100 Nairobi, Kenya</li>
                 <li><i class="bi bi-envelope"></i> flyware600@gmail.com</li>
                 <li><i class="bi bi-phone"></i> +254704597888</li>
                 <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/neville-kitur-992332345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/neville-kitur</a></li>
@@ -463,7 +770,7 @@
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between">
-                    <span>App Management</span>
+                    <span>App Development</span>
                     <span>90%</span>
                   </div>
                   <div class="progress">
@@ -486,317 +793,134 @@
 
           <!-- Right column with experience and education -->
           <div class="col-lg-8 ps-4 ps-lg-5">
+            <!-- Experience Section -->
+            <div class="resume-section" data-aos="fade-up">
+              <h3><i class="bi bi-briefcase me-2"></i>Professional Experience</h3>
 
-<!-- Experience Section -->
-<div class="resume-section" data-aos="fade-up">
-  <h3><i class="bi bi-briefcase me-2"></i>Professional Experience</h3>
+              <div class="resume-item">
+                <h4>Founder & Lead Developer — KIU</h4>
+                <h5>2024 - Present</h5>
+                <p class="company"><i class="bi bi-building"></i> Smart Queue Management Platform — <a href="https://kiuorg.web.app/" target="_blank">kiuorg.web.app</a></p>
+                <ul>
+                  <li>Architected and developed a comprehensive queue management ecosystem designed to eliminate waiting stress and transform service delivery.</li>
+                  <li>Integrated smart slot booking with intelligent queue prediction, encrypted 6-digit secure authentication codes, and live performance analytics.</li>
+                  <li>Built highly responsive cross-platform web and mobile interfaces using Flutter/Dart and Firebase, driving a zero-chaos queue flow.</li>
+                </ul>
+              </div>
 
-  <div class="resume-item">
-    <h4>Founder &amp; Lead Developer — KIU</h4>
-    <h5>2024 - Present</h5>
-    <p class="company"><i class="bi bi-building"></i> Smart Queue Management Platform — <a href="https://kiuorg.web.app/" target="_blank">kiuorg.web.app</a></p>
-    <ul>
-      <li>Architected and developed a comprehensive queue management ecosystem designed to eliminate waiting stress and transform service delivery.</li>
-      <li>Integrated smart slot booking with intelligent queue prediction, encrypted 6-digit secure authentication codes, and live performance analytics.</li>
-      <li>Built highly responsive cross-platform web and mobile interfaces using Flutter/Dart and Firebase, driving a zero-chaos queue flow.</li>
-    </ul>
-  </div>
+              <div class="resume-item">
+                <h4>Founder & Lead Developer — Fleet</h4>
+                <h5>2025 - Present</h5>
+                <p class="company"><i class="bi bi-building"></i> Fleet Management Platform</p>
+                <ul>
+                  <li>Building a comprehensive fleet management solution with real-time GPS tracking and route optimization.</li>
+                  <li>Designing driver performance analytics and predictive maintenance scheduling systems.</li>
+                  <li>Architecting scalable backend infrastructure for logistics SMEs across East Africa.</li>
+                </ul>
+              </div>
 
-  <div class="resume-item">
-    <h4>Founder & Lead Developer — KOMpRESS</h4>
-    <h5>2025 - Present</h5>
-    <p class="company"><i class="bi bi-building"></i> Self-Initiated Project</p>
-    <ul>
-      <li>Designed and developed a real-time file compression and storage optimization app for mobile devices.</li>
-      <li>Implemented backend APIs and storage monitoring for seamless performance.</li>
-      <li>Deployed prototype using GitHub CI/CD and Heroku auto-deploy pipelines.</li>
-    </ul>
-  </div>
+              <div class="resume-item">
+                <h4>Founder & Lead Developer — Shuffle</h4>
+                <h5>2025 - Present</h5>
+                <p class="company"><i class="bi bi-building"></i> Music Discovery & Shuffling Platform</p>
+                <ul>
+                  <li>Developing an AI-powered music discovery engine with intelligent shuffle algorithms.</li>
+                  <li>Building cross-platform mobile experience with seamless library synchronization.</li>
+                  <li>Implementing offline-first architecture optimized for low-connectivity African markets.</li>
+                </ul>
+              </div>
 
-  <div class="resume-item">
-    <h4>Founder — COUNTYING</h4>
-    <h5>2025</h5>
-    <p class="company"><i class="bi bi-building"></i> Business Management App</p>
-    <ul>
-      <li>Created a financial tracking system tailored for young entrepreneurs and SMEs.</li>
-      <li>Integrated inventory management and AI-powered business insights.</li>
-      <li>Designed tiered service plans ranging from basic to premium.</li>
-    </ul>
-  </div>
+              <div class="resume-item">
+                <h4>Founder & Lead Developer — The Bid</h4>
+                <h5>2025 - Present</h5>
+                <p class="company"><i class="bi bi-building"></i> Online Bidding & Auction Platform</p>
+                <ul>
+                  <li>Designing a secure real-time bidding engine with live auction countdowns.</li>
+                  <li>Building escrow payment system and verified seller profile authentication.</li>
+                  <li>Creating mobile-first platform optimized for African market connectivity.</li>
+                </ul>
+              </div>
+            </div>
 
-  <div class="resume-item">
-    <h4>Founder — KREATA</h4>
-    <h5>2024 - Present</h5>
-    <p class="company"><i class="bi bi-building"></i> Wearable Tech & Content Innovation</p>
-    <ul>
-      <li>Conceptualized and prototyped wearable camera technology integrated into apparel and sports gear.</li>
-      <li>Designed products for creators, athletes, and event coverage with new perspective capture.</li>
-      <li>Expanded into KREATA LensHouse, a photography gear and training business in Kajiado County.</li>
-    </ul>
-  </div>
+            <!-- Education Section -->
+            <div class="resume-section" data-aos="fade-up" data-aos-delay="100">
+              <h3><i class="bi bi-mortarboard me-2"></i>Education</h3>
 
-  <div class="resume-item">
-    <h4>Founder — ChillDrop</h4>
-    <h5>2023 - Present</h5>
-    <p class="company"><i class="bi bi-building"></i> Logistics & Transportation Startup</p>
-    <ul>
-      <li>Built a logistics solution targeting reliable, affordable delivery across Kenya.</li>
-      <li>Focused on university towns and SMEs for optimized last-mile transport.</li>
-      <li>Planned integration of digital tracking for enhanced customer experience.</li>
-    </ul>
-  </div>
-</div>
+              <div class="resume-item">
+                <h4>Bachelor of Science in Computer Science</h4>
+                <h5>2022 - 2026</h5>
+                <p class="company"><i class="bi bi-building"></i> Karatina University</p>
+                <p>Focused on software development, green technology, and innovation. Active in building projects that merge tech with entrepreneurship.</p>
+              </div>
 
-           <!-- Education Section -->
-<div class="resume-section" data-aos="fade-up" data-aos-delay="100">
-  <h3><i class="bi bi-mortarboard me-2"></i>Education</h3>
+              <div class="resume-item">
+                <h4>Mobile Software Technology (MIT)</h4>
+                <h5>2021</h5>
+                <p class="company"><i class="bi bi-building"></i> eMobilis Mobile Technology Institute — Westlands, Nairobi</p>
+                <p>Studied MIT (Mobile Software Technology), gaining in-depth training in mobile application development, programming fundamentals, and database systems.</p>
+              </div>
 
-  <div class="resume-item">
-    <h4>Bachelor of Science in Computer Science</h4>
-    <h5>2022 - 2026</h5>
-    <p class="company"><i class="bi bi-building"></i> Karatina University</p>
-    <p>Focused on software development, green technology, and innovation. Active in building projects that merge tech with entrepreneurship.</p>
-  </div>
+              <div class="resume-item">
+                <h4>Kenya Certificate of Secondary Education (KCSE)</h4>
+                <h5>2017 - 2020</h5>
+                <p class="company"><i class="bi bi-building"></i> Lenana School</p>
+                <p>Excelled in sciences and computer studies. Developed early interest in technology and leadership.</p>
+              </div>
 
-  <div class="resume-item">
-    <h4>Mobile Software Technology (MIT)</h4>
-    <h5>2021</h5>
-    <p class="company"><i class="bi bi-building"></i> eMobilis Mobile Technology Institute — Westlands, Nairobi</p>
-    <p>Studied MIT (Mobile Software Technology), gaining in-depth training in mobile application development, programming fundamentals, and database systems.</p>
-  </div>
+              <div class="resume-item">
+                <h4>Kenya Certificate of Primary Education (KCPE)</h4>
+                <h5>2008 - 2016</h5>
+                <p class="company"><i class="bi bi-building"></i> Chelsa Academy</p>
+                <p>Built strong academic foundation and curiosity for problem-solving through early exposure to computers and innovation.</p>
+              </div>
+            </div>
 
-  <div class="resume-item">
-    <h4>Kenya Certificate of Secondary Education (KCSE)</h4>
-    <h5>2017 - 2020</h5>
-    <p class="company"><i class="bi bi-building"></i> Lenana School</p>
-    <p>Excelled in sciences and computer studies. Developed early interest in technology and leadership.</p>
-  </div>
+            <!-- Certifications Section -->
+            <div class="resume-section" data-aos="fade-up" data-aos-delay="200">
+              <h3><i class="bi bi-award me-2"></i>Certifications</h3>
 
-  <div class="resume-item">
-    <h4>Kenya Certificate of Primary Education (KCPE)</h4>
-    <h5>2008 - 2016</h5>
-    <p class="company"><i class="bi bi-building"></i> Chelsa Academy</p>
-    <p>Built strong academic foundation and curiosity for problem-solving through early exposure to computers and innovation.</p>
-  </div>
-</div>
+              <div class="resume-item">
+                <h4>Self-Taught Software Development</h4>
+                <h5>Ongoing</h5>
+                <p>Practical mastery of Python, JavaScript, and Kotlin through personal projects, problem-solving, and continuous learning.</p>
+              </div>
 
-           <!-- Certifications Section -->
-<div class="resume-section" data-aos="fade-up" data-aos-delay="200">
-  <h3><i class="bi bi-award me-2"></i>Certifications</h3>
+              <div class="resume-item">
+                <h4>Web Development & Deployment</h4>
+                <h5>2024</h5>
+                <p>Built and deployed apps using Node.js, Django, React, GitHub CI/CD pipelines, and Heroku auto-deploy systems.</p>
+              </div>
 
-  <div class="resume-item">
-    <h4>Self-Taught Software Development</h4>
-    <h5>Ongoing</h5>
-    <p>Practical mastery of Python, JavaScript, and Kotlin through personal projects, problem-solving, and continuous learning.</p>
-  </div>
+              <div class="resume-item">
+                <h4>Mobile Application Development</h4>
+                <h5>2024</h5>
+                <p>Hands-on experience developing Android applications with Kotlin and Jetpack Compose. Focused on building scalable and user-friendly mobile products.</p>
+              </div>
 
-  <div class="resume-item">
-    <h4>Web Development & Deployment</h4>
-    <h5>2024</h5>
-    <p>Built and deployed apps using Node.js, Django, React, GitHub CI/CD pipelines, and Heroku auto-deploy systems.</p>
-  </div>
-
-  <div class="resume-item">
-    <h4>Mobile Application Development</h4>
-    <h5>2024</h5>
-    <p>Hands-on experience developing Android applications with Kotlin and Jetpack Compose. Focused on building scalable and user-friendly mobile products.</p>
-  </div>
-
-  <div class="resume-item">
-    <h4>AI & Emerging Technologies</h4>
-    <h5>2023 - Present</h5>
-    <p>Exploring artificial intelligence, computer graphics, and metaverse development using Unity with a focus on African cultural experiences.</p>
-  </div>
-</div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Resume Section -->
-
-
-<!-- Services Section -->
-<section id="services" class="services section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Services</h2>
-    <p>Building future-ready digital solutions with cutting-edge technology.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="service-header">
-      <div class="row align-items-center">
-        <div class="col-lg-8 col-md-12">
-          <div class="service-intro">
-            <h2 class="service-heading">
-              <div>Transforming ideas</div>
-              <div><span>into scalable tech solutions</span></div>
-            </h2>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-12">
-          <div class="service-summary">
-            <p>
-              From mobile apps to cloud platforms, I deliver secure, innovative, and scalable software solutions tailored for startups and enterprises.
-            </p>
-<!--            <a href="services.html" class="service-btn">-->
-<!--              View All Services-->
-<!--              <i class="bi bi-arrow-right"></i>-->
-<!--            </a>-->
+              <div class="resume-item">
+                <h4>AI & Emerging Technologies</h4>
+                <h5>2023 - Present</h5>
+                <p>Exploring artificial intelligence, computer graphics, and metaverse development using Unity with a focus on African cultural experiences.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="row justify-content-center">
-      <!-- Custom App Development -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-phone"></i>
-          </div>
-          <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="service-details.html">
-              Custom <span>App Development</span>
-            </a>
-          </h3>
-          <p>
-            End-to-end design and development of mobile and web apps — optimized for performance, usability, and scalability.
-          </p>
-        </div>
-      </div>
-
-      <!-- Cloud & DevOps -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-cloud-arrow-up"></i>
-          </div>
-          <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="service-details.html">
-              Cloud & <span>DevOps</span>
-            </a>
-          </h3>
-          <p>
-            Deployment, automation, and scaling using AWS, GCP, and CI/CD pipelines to ensure reliable and seamless operations.
-          </p>
-        </div>
-      </div>
-
-      <!-- AI & Automation -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-cpu"></i>
-          </div>
-          <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="service-details.html">
-              AI & <span>Automation</span>
-            </a>
-          </h3>
-          <p>
-            Integrating machine learning models, chatbots, and intelligent systems to streamline workflows and boost efficiency.
-          </p>
-        </div>
-      </div>
-
-      <!-- Fintech & Business Systems -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-cash-coin"></i>
-          </div>
-          <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="service-details.html">
-              Fintech & <span>Business Systems</span>
-            </a>
-          </h3>
-          <p>
-            Designing finance, inventory, and accounting platforms that handle real-time transactions securely and efficiently.
-          </p>
-        </div>
-      </div>
-
-      <!-- Metaverse & AR/VR -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-vr"></i>
-          </div>
-          <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="service-details.html">
-              Metaverse & <span>AR/VR</span>
-            </a>
-          </h3>
-          <p>
-            Building immersive digital experiences and interactive platforms rooted in culture, education, and innovation.
-          </p>
-        </div>
-      </div>
-
-      <!-- Startup Tech Advisory -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-lightbulb"></i>
-          </div>
-          <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="service-details.html">
-              Startup <span>Tech Advisory</span>
-            </a>
-          </h3>
-          <p>
-            Helping startups architect and launch scalable, investment-ready tech solutions — from MVP to growth stage.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-   <!-- /Services Section -->
-
-
-
-    <!-- Contact Section -->
     <!-- Contact Section -->
     <section id="contact" class="contact section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Let’s connect — whether for collaborations, partnerships, or tech projects.</p>
-      </div><!-- End Section Title -->
+        <p>Let's connect — whether for collaborations, partnerships, or tech projects.</p>
+      </div>
 
       <div class="container">
         <div class="row g-4 g-lg-7 justify-content-center">
           <div class="col-lg-12">
             <div class="info-box">
               <h3>Contact Info</h3>
-              <p class="mb-5">Reach out directly through phone or email. I’m open to discussing software development, startups, and innovative tech ideas.</p>
+              <p class="mb-5">Reach out directly through phone or email. I'm open to discussing software development, startups, and innovative tech ideas.</p>
 
               <div class="row gy-4">
                 <div class="col-md-4">
@@ -835,16 +959,13 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
-
-    </section><!-- /Contact Section -->
+    </section>
 
   </main>
-
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -868,5 +989,4 @@
   <script src="static/assets/js/main.js"></script>
 
 </body>
-
 </html>
